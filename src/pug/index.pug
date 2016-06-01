@@ -1,0 +1,53 @@
+extends ./includes/main.pug
+
+block title
+	title Zinomax – это постоянно обновляемая лента материалов о знаменитостях, путешествиях, моде, науке и технологиях, культуре, дизайне, играх, авто, спорте, еде и многом другом
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block header
+	header
+		.logo
+		a.appstore(href="https://itunes.apple.com/ru/app/zinomax/id1089529418" title="Загрузить в AppStore")
+			img(src="./img/appstore.png", alt="AppStore Download RU")
+
+block content
+	- var template = items;
+	
+	section.loader
+		.logo
+		
+	section.backgrounds
+		each val, index in template
+			article.item(data-item=index class=index == 0 && "show")
+				.bg(style="background-image: url(./img/bg/" + val.bg + ");")
+				.overlay-left
+				.overlay-bottom
+				.content
+					img(class="seo" src="./img/bg/" + val.bg, alt=val.title)
+					.title= val.title
+					.text= val.text
+
+	.control
+		.progress
+			.bar
+		.arrows
+			a(data-command="prev").left
+			a(data-command="next").right
+		.counter
+			.current
+				span.count 01
+			.length.colored /
+				span= ((template.length < 10) ? "0" : "") + template.length
+
+block footer
+	footer
+		.store
+			a.appstore(href="https://itunes.apple.com/ru/app/zinomax/id1089529418" title="Загрузить в AppStore")
+				img(src="./img/appstore.png", alt="AppStore Download RU")
+			span.text Читайте статьи любимых изданий в одном приложении и
+				span.colored  совершенно&nbsp;бесплатно
+		.hello
+			span Написать нам
+			a.colored(href="mailto:hello@soft-media-solutions.ru") hello@soft-media-solutions.ru

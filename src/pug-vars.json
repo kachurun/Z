@@ -1,0 +1,35 @@
+{
+    "items": [{
+        "bg": "zinomax-best.jpg",
+        "title": "Лучшее в zinomax",
+        "text": "Статьи, бережно отобранные вручную"
+    }, {
+        "bg": "zinomax-trip.jpg",
+        "title": "Путешествия",
+        "text": "Хорошо там, где мы будем"
+    }, {
+        "bg": "zinomax-job.jpg",
+        "title": "Карьера",
+        "text": "Работа, деньги, успех"
+    }, {
+        "bg": "zinomax-sex.jpg",
+        "title": "Секс и отношения",
+        "text": "Психологи вот-вот сделают нас счастливыми"
+    }, {
+        "bg": "zinomax-food.jpg",
+        "title": "Еда",
+        "text": "Хлеб насущный как искусство"
+    }, {
+        "bg": "zinomax-celebrities.jpg",
+        "title": "Знаменитости",
+        "text": "Они такие же как мы"
+    }, {
+        "bg": "zinomax-fashion.jpg",
+        "title": "Мода",
+        "text": "Как очаровать прохожих в этом сезоне"
+    }, {
+        "bg": "zinomax-technologies.jpg",
+        "title": "Наука и технологии",
+        "text": "Достижения цивилизации на этой неделе"
+    }]
+}

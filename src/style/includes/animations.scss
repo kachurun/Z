@@ -1,0 +1,149 @@
+$loader-pulse-duration: 1000ms; // пульс лого лоадера
+
+$bg-fade-duration: 350ms; // затенение фона, выполняется дважды (fade-in - fade-out), учитывать это
+$content-duration: 300ms; // анимация появления\исчезания контента (заголовок и текст)
+$bg-duration: 10000ms; // время за которое фон отзумится до конца, желательно что бы был больше чем длина слайда
+
+$progress-duration: 6300ms; // анимация полоски прогресса
+$progress-bar-duration: 5500ms; // анимация заполнения прогресса (фактически это время слайда)
+$progress-bar-delay: 500ms; // задержка перед началом анимации заполнения
+
+$counter-duration: 450ms; // скорость смены индикатора количества
+
+@keyframes pulse {
+    0% {
+        opacity: .8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 9;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes content-in {
+    0% {
+        opacity: 0;
+        // margin-bottom: 15px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes progress {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes counter {
+    0% {
+        position: absolute;
+        top: -100%;
+
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.animation-loader {
+    animation: pulse $loader-pulse-duration ease-in-out infinite alternate;
+}
+
+.animation-bg-in {
+    animation: fade-in $bg-fade-duration ease-in 1 normal;
+    animation-fill-mode: both;
+}
+.animation-bg-out {
+    animation: fade-out $bg-fade-duration ease-out 1 normal;
+    animation-fill-mode: both;
+}
+
+.animation-content-in {
+    animation: content-in $content-duration ease-out 1 normal;
+}
+.animation-content-out {
+    animation: content-in $content-duration ease-in 1 reverse;
+    animation-fill-mode: forwards;
+}
+
+.animation-fade-in {
+    animation: fade-in 1s ease-in 1 normal;
+}
+.animation-fade-out {
+    animation: fade-out 1s ease-out 1 normal;
+}
+
+.animation-scale-in {
+    animation: scale-in $bg-duration linear infinite alternate;
+}
+
+.animation-progress {
+    animation: progress $progress-duration linear 1 normal;
+    animation-fill-mode: both;
+}
+.animation-progress-bar {
+    animation: progress-bar $progress-bar-duration $progress-bar-delay linear 1 normal;
+    animation-fill-mode: forwards;
+}
+
+.animation-counter {
+    animation: slide-down $counter-duration ease-in 1 normal;
+    animation-fill-mode: both;
+}

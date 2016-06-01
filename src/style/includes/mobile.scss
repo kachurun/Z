@@ -1,0 +1,160 @@
+@media screen and (max-width: 1024px) {
+    header {
+        .appstore {
+            display: block;
+        }
+    }
+    .content {
+        .text {
+            line-height: 1.2em;
+        }
+    }
+    footer {
+        font-size: 14px;
+        .store {
+            width: calc(100% - 250px);
+            .appstore {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (min-width: 551px) and (max-width: 768px) {
+    $padding-t: 40px;
+    header {
+        padding: 0 $padding-t;
+    }
+    .content {
+        padding: 20px $padding-t;
+    }
+    .control {
+        .arrows {
+            width: 90px;
+            margin-left: auto;
+            padding: 20px 20px 0 0;
+            .left,
+            .right {
+                background-size: 54px 22px;
+                &:hover {
+                    opacity: 0.35;
+                }
+            }
+            .left {
+                background-position: 5px center;
+            }
+            .right {
+                background-position: -26px center;
+            }
+        }
+        .counter {
+            padding-left: $padding-t;
+        }
+    }
+    footer {
+        padding: 0 $padding-t;
+    }
+}
+@media screen and (max-width: 550px) {
+    $padding-m: 30px;
+    header {
+        top: 30px;
+        padding: 0 $padding-m;
+    }
+    .content {
+        padding: 22px $padding-m;
+        .title {
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .text {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1.25px;
+        }
+    }
+    .control {
+        .arrows {
+            width: 90px;
+            margin-left: auto;
+            padding: 20px 20px 0 0;
+            .left,
+            .right {
+                background-size: 54px 22px;
+                &:hover {
+                    opacity: 0.35;
+                }
+            }
+            .left {
+                background-position: 5px center;
+            }
+            .right {
+                background-position: -26px center;
+            }
+        }
+        .counter {
+            bottom: 10px;
+            padding-left: $padding-m;
+            .current {
+                font-size: 20px;
+                width: 23px;
+            }
+            .length {
+                font-size: 16px;
+            }
+        }
+    }
+    footer {
+        bottom: 30px;
+        padding: 0 $padding-m;
+        .store,
+        .hello {
+            display: block;
+            float: none;
+            width: 100%;
+        }
+        .hello {
+            margin-top: 25px;
+        }
+    }
+}
+@media screen and (max-height: 380px) {
+    header {
+        top: 15px;
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+        .appstore {
+            padding: 0;
+        }
+    }
+    .content {
+        .title {
+            font-size: 15px;
+        }
+        .text {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1.25px;
+        }
+    }
+    .control {
+        .arrows {
+            padding-top: 10px;
+        }
+        .counter {
+            bottom: 25px;
+            .current {
+                font-size: 20px;
+                width: 22px;
+            }
+            .length {
+                font-size: 16px;
+            }
+        }
+    }
+    footer {
+        font-size: 12px;
+        bottom: 15px;
+    }
+}

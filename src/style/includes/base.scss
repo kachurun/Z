@@ -1,0 +1,99 @@
+$accent: #f7e95d;
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', serif;
+    font-size: 14px;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background: #121212;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialised;
+    -moz-osx-font-smoothing: grayscale;
+}
+img.seo {
+    position: absolute;
+    top: -99999px;
+    display: none;
+    width: 0;
+    height: 0;
+
+    &.loading {
+        display: block;
+    }
+}
+.colored {
+    color: $accent;
+}
+.appstore {
+    display: inline-block;
+    width: 118px;
+    height: 40px;
+    vertical-align: middle;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+header {
+    position: absolute;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    padding: 0 110px;
+    .logo {
+        float: left;
+        width: 60px;
+        height: 60px;
+        background: url('../img/logo.png') no-repeat center;
+        background-size: contain;
+    }
+    .appstore {
+        display: none;
+        float: right;
+        height: 60px;
+        padding: 10px 0;
+    }
+}
+footer {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.125em;
+    position: absolute;
+    z-index: 99;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    padding: 0 110px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    .store {
+        float: left;
+        .appstore {
+            margin-right: 30px;
+        }
+        .text {
+            display: inline-block;
+            max-width: 410px;
+            vertical-align: middle;
+        }
+    }
+    .hello {
+        float: right;
+        max-width: 240px;
+        span,
+        a {
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
